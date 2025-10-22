@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>💕 Happy 23rd Birthday My Love! 🎂</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎂</text></svg>">
+    <!-- YouTube IFrame API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+    <div class="confetti-container" id="confetti-container"></div>
+    
+    <div class="balloons">
+        <div class="balloon balloon-1">🎈</div>
+        <div class="balloon balloon-2">🎈</div>
+        <div class="balloon balloon-3">🎈</div>
+        <div class="balloon balloon-4">🎈</div>
+        <div class="balloon balloon-5">🎈</div>
+    </div>
+
+    <div class="main-container">
+        <div class="birthday-card">
+            <div class="card-header">
+                <div class="photo-container">
+                    <div class="photo-placeholder" id="photo-placeholder">
+                        <div class="photo-icon">📷</div>
+                        <p>Your beautiful photo will be here! 💕</p>
+                    </div>
+                    <!-- Photo will be loaded here -->
+                    <img id="birthday-photo" class="birthday-photo" style="display: none;" alt="Nguyen Le Quy Tran">
+                </div>
+                <div class="cake-animation">🎂</div>
+                <h1 class="birthday-title">Happy 23rd Birthday!</h1>
+                <div class="sparkles">💖 ✨ 💖</div>
+            </div>
+            
+            <div class="card-body">
+                <h2 class="name-highlight">My Dearest Nguyen Le Quy Tran</h2>
+                <div class="date-highlight">October 23, 2002 - October 23, 2025</div>
+                <div class="birthday-message">
+                    <p>💕 To the most amazing woman in my life... 💕</p>
+                    <p>Today marks another beautiful year of your incredible journey. Watching you grow, laugh, and shine brighter each day fills my heart with so much love and pride.</p>
+                    <p>At 23, you're more beautiful, wise, and wonderful than ever. Thank you for being the light in my life and for all the joy you bring to every moment we share.</p>
+                    <p>� I love you more than words can express, my darling! �</p>
+                </div>
+                
+                <div class="age-celebration">
+                    <div class="age-number">2️⃣3️⃣</div>
+                    <div class="candle-container">
+                        <div class="candle">🕯️</div>
+                        <div class="candle">🕯️</div>
+                        <div class="candle">🕯️</div>
+                    </div>
+                    <p class="wish-text">Make a wish, my love! 💫</p>
+                    <p class="boyfriend-note">I hope all your dreams come true, just like mine did when I met you ❤️</p>
+                </div>
+            </div>
+            
+            <div class="card-footer">
+                <button class="celebration-btn" onclick="startCelebration()">
+                    💖 Celebrate My Love! 💖
+                </button>
+                <div class="party-emojis">
+                    <span>💕</span>
+                    <span>�</span>
+                    <span>🎁</span>
+                    <span>🍰</span>
+                    <span>💎</span>
+                </div>
+                <div class="love-signature">
+                    <p>With all my love, your devoted boyfriend 💕</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="birthday-quotes">
+            <div class="quote active">
+                "Every moment with you feels like a celebration. Happy Birthday, my love!" 💕
+            </div>
+            <div class="quote">
+                "You're not just a year older, you're a year more beautiful, inside and out!" �
+            </div>
+            <div class="quote">
+                "23 looks absolutely perfect on you, just like everything else does!" ✨
+            </div>
+            <div class="quote">
+                "Thank you for being the most incredible girlfriend and making every day magical!" 💖
+            </div>
+        </div>
+    </div>
+
+    <div class="music-controls">
+        <button id="music-toggle" onclick="toggleMusic()">🎵 Play Music</button>
+    </div>
+
+    <div class="magic-controls">
+        <div class="magic-hint">
+            <p>✨ Magic Keys ✨</p>
+            <p class="magic-instructions">Press L💕 H😊 B🎉 G🐩 T👧 Space for surprises!</p>
+        </div>
+    </div>
+
+    <div class="song-info" id="song-info" style="display: none;">
+        <div class="song-details">
+            <p>🎵 Now Playing</p>
+            <p>Your Special Song 💕</p>
+        </div>
+    </div>
+
+    <!-- Audio element with multiple fallback sources -->
+    <audio id="birthday-music" loop>
+        <!-- You can add your own MP3 file here -->
+        <source src="birthday-song.mp3" type="audio/mpeg">
+        <!-- Alternative online sources -->
+        <source src="https://www.bensound.com/bensound-music/bensound-happyrock.mp3" type="audio/mpeg">
+        <!-- Fallback to Web Audio API generated tune -->
+    </audio>
+
+    <!-- YouTube Player for background music -->
+    <div id="youtube-player-container" style="position: fixed; top: -1000px; left: -1000px; width: 1px; height: 1px; overflow: hidden;">
+        <div id="youtube-player"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
